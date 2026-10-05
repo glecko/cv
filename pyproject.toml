@@ -1,0 +1,14 @@
+[project]
+name = "cv"
+version = "1.0.0"
+description = "Builds my CV as a PDF from YAML data and an HTML/CSS layout."
+requires-python = ">=3.11"
+dependencies = [
+    "jinja2==3.1.6",
+    "playwright==1.56.0",
+    "pydantic==2.13.5",
+    "pyyaml==6.0.3",
+]
+
+[tool.ruff]
+line-length = 100

@@ -1,0 +1,11 @@
+PC:          {name: PC,                icon: windows.svg}
+Steam:       {name: Steam,             icon: steam.svg}
+EGS:         {name: Epic Games Store,  icon: epicgames.svg}
+Xbox:        {name: Xbox,              icon: xbox.svg}
+XboxOne:     {name: Xbox One,          icon: xbox.svg,        label: One}
+XboxSeries:  {name: Xbox Series S/X,   icon: xbox.svg,        label: Series S/X}
+PlayStation: {name: PlayStation,       icon: playstation.svg}
+PS4:         {name: PlayStation 4,     icon: playstation.svg, label: "4"}
+PS5:         {name: PlayStation 5,     icon: playstation.svg, label: "5"}
+Android:     {name: Android,           icon: android.svg}
+iOS:         {name: iOS,               icon: apple.svg}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <radialGradient id="glow" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(184.05 38.4) rotate(25.37) scale(410.65 191.89)">
+    <stop offset="0" stop-color="#931342"/>
+    <stop offset="0.2" stop-color="#84133e"/>
+    <stop offset="0.4" stop-color="#5b1335"/>
+    <stop offset="0.6" stop-color="#30142a"/>
+    <stop offset="0.8" stop-color="#191425"/>
+    <stop offset="1" stop-color="#0e1422"/>
+  </radialGradient>
+  <rect width="200" height="200" fill="url(#glow)"/>
+  <circle cx="86" cy="102.38" r="41.03" fill="#f8f8f8"/>
+  <path fill="#f8f8f8" d="M45 140.94 45 175.43 69.52 161.24 56.86 161.31Z"/>
+  <path fill="#f8f8f8" d="M45 31 45 65.27 56.79 44.97 69.23 44.97Z"/>
+  <path fill="#f8f8f8" d="M170.22 103.18 151.52 92.41 157.7 103.18 151.37 114.09Z"/>
+  <path fill="none" stroke="#2a1525" stroke-width="3" stroke-linejoin="round" d="M58.5 109.5V95.5L64.5 105.5 70.5 95.5V109.5M84.5 109.5V96.5H91A3.5 3.5 0 0 1 91 103.5H84.5M115.5 99.5C114.3 97.4 112.8 96.5 110.6 96.5 107.6 96.5 106 98.6 106 102.5S107.6 108.5 110.6 108.5H115.2V102.6H111.6"/>
+</svg>

@@ -1,0 +1,33 @@
+UE5:            {name: Unreal Engine 5, icon: unrealengine.svg}
+UE4:            {name: Unreal Engine 4, icon: unrealengine.svg}
+Unity:          {name: Unity,           icon: unity.svg}
+
+C++20:          {name: C++20,           icon: cplusplus.svg}
+C++17:          {name: C++17,           icon: cplusplus.svg}
+C++11/C:        {name: C++11 / C,       icon: cplusplus.svg}
+C#:             {name: C#,              icon: code.svg}
+Java:           {name: Java,            icon: java.svg}
+Delphi:         {name: Delphi,          icon: delphi.svg}
+Python:         {name: Python,          icon: python.svg}
+Lua:            {name: Lua,             icon: lua.svg}
+PHP:            {name: PHP,             icon: php.svg}
+TypeScript:     {name: Typescript,      icon: typescript.svg}
+HTML:           {name: HTML,            icon: html5.svg}
+SQL:            {name: SQL,             icon: database.svg}
+Cassandra:      {name: Cassandra,       icon: apachecassandra.svg}
+Redis:          {name: Redis,           icon: redis.svg}
+
+React:          {name: React,           icon: react.svg}
+ReactNative:    {name: React Native,    icon: react.svg}
+Angular:        {name: Angular,         icon: angular.svg}
+MaterialDesign: {name: Material Design, icon: materialdesign.svg}
+Flask:          {name: Flask,           icon: flask.svg}
+Django:         {name: Django,          icon: django.svg}
+Liferay:        {name: Liferay,         icon: liferay.svg}
+
+CMake:          {name: CMake,           icon: cmake.svg}
+GitHubActions:  {name: GH Actions,      icon: githubactions.svg}
+Travis:         {name: Travis,          icon: travisci.svg}
+Jenkins:        {name: Jenkins,         icon: jenkins.svg}
+Docker:         {name: Docker,          icon: docker.svg}
+CloudFormation: {name: Cloudformation,  icon: aws.svg}

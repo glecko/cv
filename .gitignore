@@ -1,0 +1,7 @@
+build/
+.venv/
+__pycache__/
+uv.lock
+
+# Private data we don't want to keep git-versioned
+data/private.yaml

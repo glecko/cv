@@ -1,0 +1,194 @@
+name: Alejandro Muelas
+title: Software engineer
+photo: photo.jpg
+
+profile:
+  - I'm a software engineer currently working remotely from Barcelona, Spain.
+  - I consider myself an open-minded and friendly person who likes meeting new people and travelling.
+  - I have a strong interest in video game development, which I consider my passion.
+
+contact:
+  - icon: phone.svg
+    text: ${phone}
+    url: tel:${phone_url}
+  - icon: envelope.svg
+    text: ${email}
+    url: mailto:${email}
+  - icon: github.svg
+    text: github.com/glecko
+    url: https://github.com/glecko
+
+languages:
+  - {name: Spanish, level: Mother tongue, flag: es.svg}
+  - {name: German,  level: Mother tongue, flag: de.svg}
+  - {name: English, level: Advanced (C1), flag: gb.svg}
+  - {name: Catalan, level: Advanced (C1), flag: ct.svg}
+  - {name: French,  level: Basic (B1),    flag: fr.svg}
+
+sections:
+  - title: Work experience
+    icon: briefcase.svg
+    extra_css_classes: [spacious_section]
+    entries:
+      - title: Senior Software Engineer
+        period: Jul 2023 - Present
+        organization: The Multiplayer Group
+        location: Remote
+        logo: multiplayer-group.svg
+        visible: true
+        projects:
+          - name: Overwatch Rush
+            client: Blizzard
+            logo: blizzard.svg
+            period: Nov 2025 - Present
+            description: >
+              Contributed to the launch of Overwatch: Rush, a hero shooter. Integrated online &
+              account systems (Battle.Net) and third-party SDKs. Implemented backend features
+              supporting platform functionality.
+            stack: [Unity, C#, Java, Docker, Cassandra, Redis]
+            game_release_platforms: [Android, iOS]
+
+          - name: Unannounced Title
+            period: Dec 2024 - Oct 2025
+            description: >
+              Built the online features (friends, lobbies, matchmaking), platform integrations, 
+              and authentication flows for an unannounced title using Epic Online Services (EOS). 
+              Ensured console TRC compliance across all features.
+              Profiled and optimised gameplay and online networking.
+            stack: [UE5, C++17]
+            game_release_platforms: [Steam, EGS, Xbox, PS5]
+
+          - name: MultiVersus
+            client: Warner Bros. Games
+            logo: warner-bros-games.svg
+            period: Jul 2023 - Nov 2024
+            description: >
+              Contributed to the launch of MultiVersus, a multiplayer fighting game. 
+              Built UI systems and an input-handling framework using the CommonUI plugin,
+              as well as online features, matchmaking, and several liveops systems.
+            stack: [UE5, C++17]
+            game_release_platforms: [Steam, EGS, XboxOne, XboxSeries, PS4, PS5]
+
+      - title: Senior Game Developer
+        period: Sep 2022 - Jun 2023
+        organization: Coffee Stain
+        location: Remote
+        logo: coffee-stain.svg
+        visible: true
+        description: >
+          Part-time contract working on core and online systems for Midnight Ghost Hunt, a multiplayer shooter.
+          Projects included releasing the game on EGS, implementing a host migration system,
+          adding analytics, and improving the build pipeline.
+        stack: [UE4, C++17]
+        game_release_platforms: [Steam, EGS]
+
+      - title: Co-founder & Software Engineer
+        period: Sep 2022 - Jun 2023
+        organization: Storyweavers AB
+        logo: storyweavers.png
+        visible: true
+        description: >
+          Co-founded Storyweavers, a company of toolmakers in the games industry, aiming to change
+          the way narratively complex games are created and make them more accessible to small
+          studios.
+        stack: [C++20, CMake, GitHubActions]
+
+      - title: Gameplay Engineer
+        period: Jun 2021 - Sep 2022
+        organization: Mutate
+        location: Stockholm (remote)
+        logo: mutate.svg
+        visible: true
+        description: >
+          Worked on gameplay, tools and core systems for a real-time collaborative, live-edit,
+          voxel-based UGC game engine aimed at enabling non-technical users to make games through
+          the use of a visual scripting language.
+        stack: [C++17, React, C#, CMake, GitHubActions]
+
+      - title: Tools Developer
+        period: Aug 2018 - Jun 2021
+        organization: Socialpoint
+        location: Barcelona
+        logo: socialpoint.svg
+        visible: true
+        description: >
+          Owned the tools ecosystem of a live mobile game. I was responsible for monitoring
+          workflows in art, game design, live ops and QA, identifying inefficiencies and
+          developing tools to optimise them.
+        stack:
+          - Angular
+          - React
+          - TypeScript
+          - Flask
+          - Django
+          - Python
+          - Unity
+          - C#
+          - Travis
+          - Docker
+          - SQL
+          - CloudFormation
+
+      - title: Backend Developer
+        period: Feb 2017 - Aug 2018
+        organization: Tango04 Computing
+        location: Barcelona
+        logo: tango04.svg
+        visible: true
+        collapsed: true
+        description: Developed monitoring and digital service management software as a backend developer.
+        stack: [C++11/C, Java, Delphi, SQL, Python, Jenkins]
+
+      - title: Internship
+        period: Feb 2016 - Sep 2016
+        organization: everis
+        location: Barcelona
+        logo: everis.svg
+        visible: false
+        collapsed: true
+        description: >
+          Carried out a project on deployment and integration of web applications inside Docker
+          containers. Tasks also included development of web applications with Liferay.
+        stack: [Liferay, Java, Docker]
+
+  - title: Other activities
+    icon: lightbulb.svg
+    entries:
+      - title: Solo MMORPG project
+        period: 2009 - 2024
+        visible: true
+        description: >
+          Developer of Ruthless Chaos, a live open-world MMORPG with an active playerbase of
+          3.500 in its last (6th) season. It was built on an open-source game engine. Ruthless
+          Chaos is offline as of December 2024.
+        stack: [C++20, Lua, CMake, PHP, HTML, SQL]
+
+      - title: Board of European Students of Technology
+        period: 2012 - 2016
+        visible: true
+        description: >
+          Member & treasurer of the local board of BEST, a student NGO that organizes educational events. 
+          Externally represented a team of ~40 student members.
+
+      - title: Mobile App Development
+        period: 2020 - 2021
+        visible: true
+        description: >
+          MySip is a published iOS/Android app I developed for tracking alcohol consumption habits.
+        stack: [ReactNative, TypeScript, MaterialDesign]
+
+  - title: Education
+    icon: pen-to-square.svg
+    entries:
+      - title: Telecommunications Engineering Degree
+        period: 2011 - 2016
+        organization: UPC
+        logo: upc.svg
+        visible: true
+        description: Specialization in Telematic Engineering (focus on network management, cryptography and distributed applications).
+
+      - title: High School
+        period: 1999 - 2011
+        organization: Deutsche Schule Barcelona
+        visible: false
+        description: German high school degree with honors.

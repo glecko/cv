@@ -1,0 +1,147 @@
+{% macro hexagon_icon(icon, style) %}
+<span class="hexagon hexagon--{{ style }}">{{ inline_svg("icons/ui/" ~ icon) }}</span>
+{% endmacro %}
+
+{% macro section_heading(title, icon) %}
+<h2 class="section-heading">{{ hexagon_icon(icon, "outlined") }}{{ title }}</h2>
+{% endmacro %}
+
+{% macro logo(file, class) %}
+<img class="{{ class }}" src="{{ asset_url('logos/' ~ file) }}" alt="">
+{% endmacro %}
+
+{% macro details(item) %}
+{% if item.description and not item.collapsed %}
+<p class="description">{{ item.description }}</p>
+{% endif %}
+{% if item.stack or item.game_release_platforms %}
+<div class="badges">
+  <ul class="stack">
+    {% for skill in item.stack %}
+    <li class="skill">{{ inline_svg("icons/skills/" ~ skill.icon) }}{{ skill.name }}</li>
+    {% endfor %}
+  </ul>
+  {% if item.game_release_platforms %}
+  <div class="platforms">
+    <span class="platforms__label">Platforms:</span>
+    {% for platform in item.game_release_platforms %}
+    {% if loop.previtem is defined and loop.previtem.icon == platform.icon %}
+    <span class="platform platform--same-icon" title="{{ platform.name }}">{{ platform.label }}</span>
+    {% else %}
+    <span class="platform" title="{{ platform.name }}">
+      {{- inline_svg("icons/platforms/" ~ platform.icon) }}{{ platform.label -}}
+    </span>
+    {% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+{% endif %}
+{% endmacro %}
+
+{% macro affiliation(name, logo_file) %}
+<p class="affiliation">
+  {% if logo_file %}
+  {{ logo(logo_file, "affiliation__logo") }}
+  {% endif %}
+  {{ name }}
+</p>
+{% endmacro %}
+
+{% macro project_article(project) %}
+<article class="project">
+  <header class="title-row">
+    <h4 class="project__heading">
+      <span class="project__name">{{ project.name }}</span>
+    </h4>
+    {% if project.client %}
+    {{ affiliation(project.client, project.logo) }}
+    {% endif %}
+    <span class="period">{{ project.period }}</span>
+  </header>
+  {{ details(project) }}
+</article>
+{% endmacro %}
+
+{% macro entry_article(entry) %}
+<article class="entry">
+  <header class="title-row">
+    <h3 class="entry__heading">
+      <span class="entry__title">{{ entry.title }}</span>
+    </h3>
+    {% if entry.organization %}
+    {{ affiliation([entry.organization, entry.location] | select | join(", "), entry.logo) }}
+    {% endif %}
+    <span class="period">{{ entry.period }}</span>
+  </header>
+  {{ details(entry) }}
+  {% for project in entry.projects %}
+  {{ project_article(project) }}
+  {% endfor %}
+</article>
+{% endmacro %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ cv.name }} - {{ cv.title }}</title>
+  <link rel="stylesheet" href="{{ stylesheet_url('cv.css') }}">
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <header class="identity">
+        <div class="identity__photo">
+          <img src="{{ asset_url(cv.photo) }}" alt="">
+        </div>
+        <h1 class="identity__name">{{ cv.name }}</h1>
+        <p class="identity__title">{{ cv.title }}</p>
+      </header>
+
+      <section class="profile">
+        {{ section_heading("Profile", "file-lines.svg") }}
+        {% for paragraph in cv.profile %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
+      </section>
+
+      <section>
+        {{ section_heading("Contact me", "user.svg") }}
+        <ul class="icon-list">
+          {% for channel in cv.contact %}
+          <li class="contact-channel">
+            {{ hexagon_icon(channel.icon, "filled") }}
+            <a href="{{ channel.url }}" target="_blank" rel="noopener">{{ channel.text }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      <section>
+        {{ section_heading("Languages", "chart-pie.svg") }}
+        <ul class="icon-list">
+          {% for language in cv.languages %}
+          <li class="language">
+            <img class="language__flag" src="{{ asset_url('flags/' ~ language.flag) }}" alt="">
+            <span class="language__name">{{ language.name }}</span>
+            <span class="language__level">{{ language.level }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+    </aside>
+
+    <main class="main">
+      {% for section in cv.sections if section.entries %}
+      <section class="{{ section.extra_css_classes | join(' ') }}">
+        {{ section_heading(section.title, section.icon) }}
+        {% for entry in section.entries %}
+        {{ entry_article(entry) }}
+        {% endfor %}
+      </section>
+      {% endfor %}
+    </main>
+  </div>
+</body>
+</html>
